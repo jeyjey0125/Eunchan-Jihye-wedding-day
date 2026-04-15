@@ -32,9 +32,9 @@
   --spacing-xl: 5rem;
   --spacing-2xl: 6rem;
 
-  --radius-sm: 2px;
-  --radius-md: 4px;
-  --radius-lg: 8px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
 
   --transition: 0.3s ease;
   --transition-slow: 0.6s ease;
@@ -55,7 +55,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 10px;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
 }
