@@ -1,50 +1,50 @@
 /**
- * Wedding Invitation Configuration
- *
- * 이 파일에서 청첩장의 모든 정보를 수정할 수 있습니다.
- * 이미지는 설정이 필요 없습니다. 아래 폴더에 순번 파일명으로 넣으면 자동 감지됩니다.
- *
- * 이미지 폴더 구조 (파일명 규칙):
- *   images/hero/1.jpg      - 메인 사진 (1장, 필수)
- *   images/story/1.jpg, 2.jpg, ...  - 스토리 사진들 (순번, 자동 감지)
- *   images/gallery/1.jpg, 2.jpg, ... - 갤러리 사진들 (순번, 자동 감지)
- *   images/location/1.jpg  - 약도/지도 이미지 (1장)
- *   images/og/1.jpg        - 카카오톡 공유 썸네일 (1장)
- */
+  * 청첩장 구성
+   * 
+   * 이 파일에서 청첩장의 모든 정보를 수정할 수 있습니다. 
+  * 이미지는 설정이 필요 없습니다. 아래 폴더에 순번 파일명으로 넣으면 자동 감지됩니다.
+  *
+  * 이미지 폴더 구조 (파일명 규칙):
+  *   images/hero/1.jpg      - 메인 사진 (1장, 필수)
+  *   images/story/1.jpg, 2.jpg, ...  - 스토리 사진들 (순번, 자동 감지)
+  *   images/gallery/1.jpg, 2.jpg, ... - 갤러리 사진들 (순번, 자동 감지)
+  *   images/location/1.jpg  - 약도/지도 이미지 (1장)
+  *   images/og/1.jpg        - 카카오톡 공유 썸네일 (1장)
+  */
 
-const CONFIG = {
+  콘스트    구성  =  {
   // ── 초대장 열기 ──
-  useCurtain: false,  // 초대장 열기 화면 사용 여부 (true: 사용, false: 바로 본문 표시)
+   사용    커튼커튼:    거짓  ,    // 초대장 열기 화면 사용 여부 (true: 사용, false: 바로 본문 표시)
 
   // ── 메인 (히어로) ──
-  groom: {
-    name: "김은찬",
-    nameEn: "Groom",
-    father: "김규성",
-    mother: "김명숙",
-    fatherDeceased: false,
-    motherDeceased: false
+  신랑:  {
+    이름:  "김은찬",
+    네임엔 :   신랑..,
+    아버지:  "김규성",
+    어머니:  "김명숙",
+    아버지   고인 고인:    거짓,
+    어머니   고인 고인:    거짓
   },
 
-  bride: {
-    name: "김지혜",
-    nameEn: "Bride",
-    father: "김원기",
-    mother: "문정순",
-    fatherDeceased: false,
-    motherDeceased: false
+  신부:  {
+    이름:  "김지혜",
+    네임엔 :   신부..,
+    아버지:  "김원기",
+    어머니:  "문정순",
+    아버지   고인 고인:    거짓,
+    어머니   고인 고인:    거짓
   },
 
-  wedding: {
-    date: "2026-12-06",
-    time: "11:00",
-    venue: "Jk아트컨벤션",
-    hall: "아트리움홀 4층",
-    address: "서울특별시 영등포구 문래로 164",
-    tel: "02-1234-2222",
-    mapLinks: {
-      kakao: "https://map.kakao.com/",
-      naver: "https://map.naver.com/"
+  결혼식:  {
+    날짜:  "2026-12-06",
+    시간:  "11:00",
+    장소:  "Jk아트컨벤션",
+    홀:  "아트리움홀 4층",
+    주소:  "서울특별시 영등포구 문래로 164",
+    텔:  "02-1234-2222",
+    맵링크스:  {
+      카카오:  "https://map.kakao.com/",
+      네이버:  "https://map.naver.com/"
     }
   },
 
