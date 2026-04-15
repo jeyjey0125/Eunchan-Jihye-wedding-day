@@ -29,12 +29,12 @@
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2.5rem;
-  --spacing-xl: 2.5rem;
-  --spacing-2xl: 3rem;
+  --spacing-xl: 5rem;
+  --spacing-2xl: 6rem;
 
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 16px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
 
   --transition: 0.3s ease;
   --transition-slow: 0.6s ease;
