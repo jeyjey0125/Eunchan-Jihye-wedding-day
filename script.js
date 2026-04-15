@@ -179,7 +179,7 @@
       reset(initial = false) {
         this.x = Math.random() * width;
         this.y = initial ? Math.random() * height * -1 : -20;
-        this.size = 8 + Math.random() * 10;
+        this.size = 4 + Math.random() * 5;
         this.speedY = 0.5 + Math.random() * 1;
         this.speedX = -0.3 + Math.random() * 0.6;
         this.rotation = Math.random() * Math.PI * 2;
