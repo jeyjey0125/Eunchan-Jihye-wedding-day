@@ -18,7 +18,7 @@ const CONFIG = {
 
   // ── 메인 (히어로) ──
   groom: {
-    name: "김은찬2",
+    name: "김은찬3",
     nameEn: "Groom",
     father: "김규성",
     mother: "김명숙",
