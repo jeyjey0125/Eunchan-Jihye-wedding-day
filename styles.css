@@ -727,6 +727,27 @@ a {
 .gallery__item:hover img {
   transform: scale(1.08);
 }
+.gallery__more {
+  display: block;
+  margin: 28px auto 0;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.gallery__more:hover {
+  background: #f7f7f7;
+}
+
+.gallery__more:active {
+  transform: scale(0.97);
+}
 
 /* ═══════════════════════════════════════════
    Location Section
