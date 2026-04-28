@@ -179,7 +179,7 @@
       reset(initial = false) {
         this.x = Math.random() * width;
         this.y = initial ? Math.random() * height * -1 : -20;
-        this.size = 4 + Math.random() * 5;
+        this.size = 8 + Math.random() * 10;
         this.speedY = 0.5 + Math.random() * 1;
         this.speedX = -0.3 + Math.random() * 0.6;
         this.rotation = Math.random() * Math.PI * 2;
@@ -438,60 +438,28 @@
      Gallery Section
      ═══════════════════════════════════════════ */
 
-function initGallery(galleryImages) {
-  const grid = $('#galleryGrid');
+  function initGallery(galleryImages) {
+    const grid = $('#galleryGrid');
+    // Remove loading placeholder if present
+    const placeholder = grid.querySelector('.loading-placeholder');
+    if (placeholder) placeholder.remove();
 
-  const placeholder = grid.querySelector('.loading-placeholder');
-  if (placeholder) placeholder.remove();
+    if (galleryImages.length === 0) {
+      // Hide gallery section if no images found
+      const gallerySection = $('#gallery');
+      if (gallerySection) gallerySection.style.display = 'none';
+      return;
+    }
 
-  if (galleryImages.length === 0) {
-    const gallerySection = $('#gallery');
-    if (gallerySection) gallerySection.style.display = 'none';
-    return;
-  }
-
-  let expanded = false;
-  const visibleCount = 9;
-
-  const moreBtn = document.createElement('button');
-  moreBtn.className = 'gallery__more';
-  moreBtn.textContent = '더보기';
-
-  function render() {
-    grid.innerHTML = '';
-
-    const imagesToShow = expanded
-      ? galleryImages
-      : galleryImages.slice(0, visibleCount);
-
-    imagesToShow.forEach((src, i) => {
+    galleryImages.forEach((src, i) => {
       const div = document.createElement('div');
       div.className = 'gallery__item animate-item';
       div.setAttribute('data-animate', 'scale-in');
-
       div.innerHTML = `<img src="${src}" alt="갤러리 사진 ${i + 1}" loading="lazy">`;
-
       div.addEventListener('click', () => openPhotoModal(galleryImages, i));
-
       grid.appendChild(div);
     });
-
-    moreBtn.textContent = expanded ? '접기' : '더보기';
   }
-
-  moreBtn.addEventListener('click', () => {
-    expanded = !expanded;
-    render();
-  });
-
-  render();
-
-  // 9장보다 많을 때만 버튼 표시
-  if (galleryImages.length > visibleCount) {
-    grid.parentNode.appendChild(moreBtn);
-  }
-}
-  
 
   /* ═══════════════════════════════════════════
      Photo Modal (with swipe)
