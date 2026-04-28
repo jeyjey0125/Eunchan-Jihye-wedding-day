@@ -5,6 +5,7 @@
 
 (function () {
   'use strict';
+  const CONFIG = window.CONFIG;
 
   /* ═══════════════════════════════════════════
      Utility Helpers
