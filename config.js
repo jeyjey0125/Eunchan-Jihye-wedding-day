@@ -12,6 +12,7 @@
  *   images/og/1.jpg        - 카카오톡 공유 썸네일 (1장)
  */
 
+console.log(CONFIG);
 window.CONFIG = {
   // ── 초대장 열기 ──
   useCurtain: true,  // 초대장 열기 화면 사용 여부 (true: 사용, false: 바로 본문 표시)
