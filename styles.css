@@ -440,9 +440,9 @@ a {
 
 .hero__names {
   font-family: var(--font-serif);
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5.5vw, 2.1rem);
   font-weight: 200;
-  letter-spacing: 8px;
+  letter-spacing: clamp(2px, 0.8vw, 6px);
   margin-bottom: var(--spacing-md);
   line-height: 1.4;
 }
