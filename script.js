@@ -1,53 +1,5 @@
-/* ═══════════════════════════════════════════
-   Gallery Section (9장 + MORE + modal 연결)
-   ═══════════════════════════════════════════ */
-
 function initGallery(galleryImages) {
   const grid = $('#galleryGrid');
-  const placeholder = grid.querySelector('.loading-placeholder');
-  if (placeholder) placeholder.remove();
-
-  if (galleryImages.length === 0) {
-    const gallerySection = $('#gallery');
-    if (gallerySection) gallerySection.style.display = 'none';
-    return;
-  }
-
-  const MAX = 9;
-
-  const renderItems = (list, startIndex = 0) => {
-    list.forEach((src, i) => {
-      const realIndex = startIndex + i;
-
-      const div = document.createElement('div');
-      div.className = 'gallery__item animate-item';
-      div.setAttribute('data-animate', 'scale-in');
-      div.innerHTML = `<img src="${src}" alt="갤러리 사진 ${realIndex + 1}" loading="lazy">`;
-
-      div.addEventListener('click', () => openPhotoModal(galleryImages, realIndex));
-      grid.appendChild(div);
-    });
-  };
-
-  // 1) 처음 9장만 표시
-  renderItems(galleryImages.slice(0, MAX), 0);
-
-  // 2) 더보기 버튼
-  if (galleryImages.length > MAX) {
-    const btn = document.createElement('button');
-    btn.className = 'gallery__more';
-    btn.textContent = 'MORE ▼';
-
-    btn.addEventListener('click', () => {
-      renderItems(galleryImages.slice(MAX), MAX);
-      btn.remove();
-    });
-
-    grid.after(btn);
-  }
-}
-  const grid = $('#galleryGrid');
-
   const placeholder = grid.querySelector('.loading-placeholder');
   if (placeholder) placeholder.remove();
 
@@ -60,7 +12,6 @@ function initGallery(galleryImages) {
   let expanded = false;
   const visibleCount = 9;
 
-  // MORE 버튼
   const moreBtn = document.createElement('button');
   moreBtn.className = 'gallery__more';
 
@@ -76,7 +27,9 @@ function initGallery(galleryImages) {
       div.className = 'gallery__item animate-item';
       div.setAttribute('data-animate', 'scale-in');
 
-      div.innerHTML = `<img src="${src}" alt="갤러리 사진 ${i + 1}" loading="lazy">`;
+      div.innerHTML = `
+        <img src="${src}" alt="갤러리 사진 ${i + 1}" loading="lazy">
+      `;
 
       div.addEventListener('click', () => openPhotoModal(galleryImages, i));
 
@@ -94,22 +47,6 @@ function initGallery(galleryImages) {
   render();
 
   if (galleryImages.length > visibleCount) {
-    grid.parentNode.appendChild(moreBtn);
+    document.querySelector('.gallery').appendChild(moreBtn);
   }
 }
-
-/* ═══════════════════════════════════════════
-   이미지 저장 기본 방지 (우클릭/드래그)
-   ═══════════════════════════════════════════ */
-
-document.addEventListener('contextmenu', function (e) {
-  if (e.target.tagName === 'IMG') {
-    e.preventDefault();
-  }
-});
-
-document.addEventListener('dragstart', function (e) {
-  if (e.target.tagName === 'IMG') {
-    e.preventDefault();
-  }
-});
