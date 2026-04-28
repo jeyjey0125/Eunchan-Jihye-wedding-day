@@ -491,6 +491,8 @@ function initGallery(galleryImages) {
     grid.parentNode.appendChild(moreBtn);
   }
 }
+
+  div.innerHTML = `<img src="${src}" draggable="false" oncontextmenu="return false;">`;
   
 
   /* ═══════════════════════════════════════════
@@ -769,3 +771,9 @@ function initGallery(galleryImages) {
     init();
   }
 })();
+
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+document.addEventListener('dragstart', e => e.preventDefault());
+
+document.addEventListener('selectstart', e => e.preventDefault());
