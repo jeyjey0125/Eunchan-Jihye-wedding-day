@@ -14,37 +14,37 @@
 
 const CONFIG = {
   // ── 초대장 열기 ──
-  useCurtain: false,  // 초대장 열기 화면 사용 여부 (true: 사용, false: 바로 본문 표시)
+  useCurtain: true,  // 초대장 열기 화면 사용 여부 (true: 사용, false: 바로 본문 표시)
 
   // ── 메인 (히어로) ──
   groom: {
-    name: "신랑",
+    name: "김은찬",
     nameEn: "Groom",
-    father: "여기서이렇게이름을바꾸시면됩니다",
-    mother: "어머니",
+    father: "김규성",
+    mother: "김명숙",
     fatherDeceased: false,
     motherDeceased: false
   },
 
   bride: {
-    name: "신부",
+    name: "김지혜",
     nameEn: "Bride",
-    father: "아버지",
-    mother: "어머니",
+    father: "김원기",
+    mother: "문정순",
     fatherDeceased: false,
     motherDeceased: false
   },
 
   wedding: {
-    date: "2026-05-09",
-    time: "13:00",
-    venue: "예식장 이름",
-    hall: "그랜드홀 5층",
-    address: "서울특별시 강남구 테헤란로 123",
-    tel: "02-1234-5678",
+    date: "2026-12-06",
+    time: "11:00",
+    venue: "Jk아트컨벤션",
+    hall: "아트리움홀 4층",
+    address: "서울특별시 영등포구 문래로 164",
+    tel: "02-2629-9100",
     mapLinks: {
-      kakao: "https://map.kakao.com/",
-      naver: "https://map.naver.com/"
+      kakao: "https://place.map.kakao.com/19244225",
+      naver: "https://naver.me/FxFqe1Qk"
     }
   },
 
@@ -66,20 +66,20 @@ const CONFIG = {
   // ── 마음 전하실 곳 ──
   accounts: {
     groom: [
-      { role: "신랑", name: "홍길동", bank: "국민은행", number: "000-000-000000" },
-      { role: "아버지", name: "홍판서", bank: "신한은행", number: "000-000-000000" },
-      { role: "어머니", name: "김부인", bank: "우리은행", number: "000-000-000000" }
+      { role: "신랑", name: "김은찬", bank: "국민은행", number: "000-000-000000" },
+      { role: "아버지", name: "김규성", bank: "신한은행", number: "000-000-000000" },
+      { role: "어머니", name: "김명숙", bank: "우리은행", number: "000-000-000000" }
     ],
     bride: [
-      { role: "신부", name: "김영희", bank: "하나은행", number: "000-000-000000" },
-      { role: "아버지", name: "김사장", bank: "기업은행", number: "000-000-000000" },
-      { role: "어머니", name: "이부인", bank: "농협은행", number: "000-000-000000" }
+      { role: "신부", name: "김지혜", bank: "하나은행", number: "000-000-000000" },
+      { role: "아버지", name: "김원기", bank: "기업은행", number: "000-000-000000" },
+      { role: "어머니", name: "문정순", bank: "농협은행", number: "000-000-000000" }
     ]
   },
 
   // ── 링크 공유 시 나타나는 문구 ──
   meta: {
-    title: "신랑 ♥ 신부 결혼합니다",
-    description: "2025년 1월 1일, 소중한 분들을 초대합니다."
+    title: "은찬 ♥ 지혜 결혼합니다",
+    description: "2026년 12월 6일, 소중한 분들을 초대합니다."
   }
 };
